@@ -39,8 +39,10 @@ STRICT RULES:
 )
 
 
-def run_agent(user_input: str):
+
+def run_agent(user_input):
     result = agent.invoke({"messages": [{"role": "user", "content": user_input}]})
+    print(result)
     ai_message = result["messages"][-1].content
     return ai_message
             
